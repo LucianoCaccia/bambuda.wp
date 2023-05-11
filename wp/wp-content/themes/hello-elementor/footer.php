@@ -21,6 +21,7 @@ if ( ! function_exists( 'elementor_theme_do_location' ) || ! elementor_theme_do_
 ?>
 
 <?php wp_footer(); ?>
-
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/mews.js"></script>
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/mews.css">
 </body>
 </html>

@@ -1,0 +1,13 @@
+.form-wrap {
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+iframe.mews-distributor {
+    width: 70% !important;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+    margin-top: 2% !important;
+    transform: translateX(20%) !important;
+    border: 1px solid rgb(229, 229, 229, 1) !important;
+}
