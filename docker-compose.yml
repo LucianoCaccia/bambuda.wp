@@ -1,0 +1,52 @@
+
+services:
+  web:
+    image: wordpress
+    links:
+    - mysql
+    ports:
+    - "127.0.0.1:8080:80"
+    volumes:
+    - "/Users/lucho/tooit/repositories/github.com/bambuda.wp/wp:/var/www/html"
+    networks:
+      - bambudawp
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=dbhfndvbuy9zps
+    volumes:
+      - "/Users/lucho/tooit/repositories/github.com/bambuda.wp/mysql:/var/lib/mysql"
+    networks:
+      - bambudawp
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - mysql
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      credentials: root/password
+      UPLOAD_LIMIT: 402400K
+      post_max_size: 402400K
+    ports:
+      - "127.0.0.1:8081:80"
+    networks:
+      - bambudawp
+
+  
+  mailhog:
+    image: mailhog/mailhog:latest
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      - bambudawp
+
+networks:
+  bambudawp:
+    ipam:
+      config:
+        - subnet: 172.26.0.0/16
