@@ -9,6 +9,9 @@ flatpickr('#calendar-range', {
 let calendar = document.getElementById('calendar-range');
 
 // Define element 'selectLocation'
+// To implement a fixed location: 
+// - set the <select> to 'hidden'
+// - Choose the <select> option default using 'selected'
 let selectLocation = document.getElementById("selectlocation");
 
 // reloadWidget() asign configId from selectlocation input select and loadWidget()
