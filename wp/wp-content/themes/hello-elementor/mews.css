@@ -36,7 +36,6 @@ select#adultos, input#vouchercode, input#availability{
     color: #34566F;
     font-size: 14px;
 }
-
 select#selectlocation   { max-width: 214px; }
 input#calendar-range    { max-width: 214px; }
 select#adultos          { max-width: 133px; }
@@ -47,9 +46,6 @@ input#availability {
     border-color: #E28F7B;
     color: #ffffff;
 }
-
-
-
 input#availability:hover {
     background-color: #e27b61;
     border-color: #e27b61;
@@ -64,13 +60,16 @@ input#calendar-range {
     background-position: 10px 10px;
     padding-left: 38px;
 }
-
 .flatpickr-current-month .numInputWrapper {
     position: relative;
     top: -23px;
     left: 70px;
 }
-
+.warning {
+    border-color: #e27b61 !important;
+    color: #dc431c !important;
+    background-color: #e27b6114 !important;
+}
 
 @media (max-width: 576px) {
     form#date-form {

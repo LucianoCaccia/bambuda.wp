@@ -49,7 +49,8 @@ function loadWidget(configId) {
                 form.addEventListener('submit', event => {
                     // Don't use the default submit button behavior. We want to handle it ourselves.
                     let val = calendar.value;
-                    if (val != '') {  // If calendar is empty
+                    let configId = selectLocation.value;
+                    if (val != '' && configId != 'none') {  // If calendar is not empty
                         event.preventDefault();
                         // Get the dates from the date form.
                         const { start, end } = event.target.elements;    
@@ -66,11 +67,23 @@ function loadWidget(configId) {
                         api.setAdultCount(parseInt(adultos.value));
                         api.setVoucherCode(vouchercode.value);
                         api.open();                        
-                    } else { 
-                        // Focus on calendar element if it's empty
-                        document.getElementById('calendar-range').focus();
-                        event.preventDefault();
-                        return
+                    } else {
+                        if (configId == 'none') {
+                            // Change the select color to warning
+                            document.getElementById('selectlocation').classList.add("warning");
+                            setTimeout(function(){
+                                document.getElementById('selectlocation').classList.remove("warning");
+                            }, 700);
+                            event.preventDefault();
+                            return
+                        }
+                        if (val == '') {
+                            // Focus on calendar element if it's empty
+                            document.getElementById('calendar-range').focus();
+                            event.preventDefault();
+                            return
+                        }
+
                     }
                 });
             };
