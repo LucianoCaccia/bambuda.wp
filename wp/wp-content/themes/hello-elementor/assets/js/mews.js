@@ -4,7 +4,8 @@
 flatpickr('#calendar-range', {
     "mode": "range",
     minDate: "today",
-    dateFormat: "Y-m-d"
+    dateFormat: "Y-m-d",
+    currentYear: true
 });
 let calendar = document.getElementById('calendar-range');
 

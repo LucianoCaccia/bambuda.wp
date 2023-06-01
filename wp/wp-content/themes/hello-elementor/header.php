@@ -22,6 +22,9 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 	<meta name="viewport" content="<?php echo esc_attr( $viewport_content ); ?>">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
+	<!-- Implement Mews Integration -->
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/mews.css">
+	<!-- Implement Mews Integration -->
 </head>
 <body <?php body_class(); ?>>
 
