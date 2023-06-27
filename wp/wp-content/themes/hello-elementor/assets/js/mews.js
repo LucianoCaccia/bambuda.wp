@@ -29,9 +29,7 @@ reloadWidget()
 // Load the widget by the hotel selected asigned in configId
 function loadWidget(configId) {
     let iframe = document.querySelectorAll('iframe[class="mews-distributor"]');
-    if (iframe) {
-        iframe.forEach(el => el.remove());
-    }
+    if (iframe) {iframe.forEach(el => el.remove());} // remove all mews iframe
     Mews.Distributor(
         // Set Configuration ID of your booking engine.
         {
@@ -59,7 +57,7 @@ function loadWidget(configId) {
                         const [endYears, endMonths, endDays] = dateRange[1].split('-');
                         const startDate = new Date(startYears, startMonths - 1, startDays);
                         const endDate = new Date(endYears, endMonths - 1, endDays);
-    
+
                         // Use the Booking Engine Widget Javascript API to set the dates in the widget and open it.
                         api.setStartDate(startDate);
                         api.setEndDate(endDate);

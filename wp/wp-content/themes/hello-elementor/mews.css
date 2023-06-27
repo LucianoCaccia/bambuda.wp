@@ -1,12 +1,16 @@
 
+html {
+    overflow: visible !important;
+}
 body {
     background-color: beige;
+    overflow: visible !important;
 }
 iframe.mews-distributor {
     width: 70% !important;
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.12);
+    box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -moz-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
     margin-top: 2% !important;
     transform: translateX(20%) !important;
     border: 1px solid rgb(229, 229, 229, 1) !important;
@@ -111,7 +115,7 @@ input#calendar-range {
         flex-direction: column;
         position: relative;
         align-items: center;
-        top: -2em;
+        top: 0em;
     }
     .form-field {
         float: none;
