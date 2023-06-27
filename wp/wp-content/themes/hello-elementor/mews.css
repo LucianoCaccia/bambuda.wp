@@ -11,6 +11,7 @@ iframe.mews-distributor {
     transform: translateX(20%) !important;
     border: 1px solid rgb(229, 229, 229, 1) !important;
 }
+
 .form-control[readonly] {
     background-color: white;
 }
@@ -54,6 +55,32 @@ input#availability:disabled {
     background-color: #e2bab0;
     border-color: #e2bab0;
 }
+input#availability.lodge {
+    background-color: #6e9ea7;
+    border-color: #6e9ea7;
+}
+input#availability.lodge:hover {
+    background-color: #5595a0;
+    border-color: #5595a0;
+}
+input#availability.lodge:disabled {
+    background-color: #7a8f92;
+    border-color: #7a8f92;
+}
+
+input#availability.castle {
+    background-color:  #80b198;
+    border-color:  #80b198;
+}
+input#availability.castle:hover {
+    background-color:  #6fad8d;
+    border-color:  #6fad8d;
+}
+input#availability.castle:disabled {
+    background-color:  #85a494;
+    border-color:  #85a494;
+}
+
 input#calendar-range {
     background: url(./assets/images/calendar-regular.svg) no-repeat;
     background-size: 14px;
@@ -64,6 +91,12 @@ input#calendar-range {
     position: relative;
     top: -23px;
     left: 70px;
+}
+.flatpickr-current-month input.cur-year {
+    pointer-events: none;
+}
+.flatpickr-month {
+    height: 40px !important;
 }
 .warning {
     border-color: #e27b61 !important;
@@ -94,7 +127,7 @@ input#calendar-range {
     }
     iframe.mews-distributor {
         width: 100% !important;
-        transform: translateY(8%) !important;
+        margin-top: 15% !important;
+        transform: translate(0%, 0%) !important;
     }
-
 }

@@ -20,6 +20,7 @@ $skip_link_url = apply_filters( 'hello_elementor_skip_link_url', '#content' );
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="<?php echo esc_attr( $viewport_content ); ?>">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<?php wp_head(); ?>
 	<!-- Implement Mews Integration -->
