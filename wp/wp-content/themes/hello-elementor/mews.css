@@ -111,7 +111,7 @@ input#calendar-range {
         flex-direction: column;
         position: relative;
         align-items: center;
-
+        top: -2em;
     }
     .form-field {
         float: none;
