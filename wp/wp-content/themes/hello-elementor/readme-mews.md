@@ -8,7 +8,7 @@
 
 ### 2- Add sniped into footer.php
 
-Add this code before ```<?php wp_footer(); ?>```
+Add this code after ```<?php wp_footer(); ?>```
 ```php
 	<!-- Implement Mews Integration -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -69,6 +69,38 @@ Width: 874px (Homepage)
 Width: 650px (For hotels with no select location field)
 Justify Content: Center
 
-
+## How to implement inside ROOM CATEGORIES page hotels
+### 1- Create a new HTML box
+- Edit the Elementor Template popup page correspondent.
+- Add a new HTML box after the firts buton 'Book now' in the popup page.
+```html
+<script>
+document.addEventListener("DOMContentLoaded", function(event) {
+    let iframe = document.querySelectorAll('iframe[class="mews-distributor"]');
+    if (iframe) {
+        iframe.forEach(el => el.remove());
+    }
+    Mews.Distributor({
+        configurationIds: [
+            '6dcea3c6-1445-4895-bbce-aeb000f8fac1',
+        ],
+        openElements: '.distributor-open',
+    });    
+});
+</script>
+<style>
+    iframe.mews-distributor {
+    width: 70% !important;
+    box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    -moz-box-shadow: 200px 200px 400px 500px rgba(0,0,0,0.6);
+    margin-top: 2% !important;
+    transform: translateX(20%) !important;
+    border: 1px solid rgb(229, 229, 229, 1) !important;
+    }
+</style>
+```
+- Set the class of each buton on popup page, with 'distributor-open'
+- Save popup page
 
 
