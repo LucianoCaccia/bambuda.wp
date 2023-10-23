@@ -4,6 +4,9 @@
 flatpickr('#calendar-range', {
     "mode": "range",
     minDate: "today",
+    altInput: true,
+    altFormat: "M j",
+    altInputClass: "calendar-input",
     dateFormat: "Y-m-d",
     currentYear: true
 });
