@@ -58,8 +58,8 @@ select#adultos, input#vouchercode, input#availability{
     color: #34566F;
     font-size: 14px;
 }
-select#selectlocation   { max-width: 200px; }
-input#calendar-range, input.calendar-input    { max-width: 230px; }
+select#selectlocation   { max-width: 215px; min-width: 174px; }
+input#calendar-range, input.calendar-input    { max-width: 205px; }
 select#adultos          { max-width: 133px; }
 input#vouchercode       { max-width: 115px; text-align: center; }
 input#availability {    
